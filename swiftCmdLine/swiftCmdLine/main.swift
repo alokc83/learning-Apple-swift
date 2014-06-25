@@ -141,39 +141,82 @@ import Foundation
 
 /* Function and closures */
 
-func greet(name: String, day: String) -> String {
-    return "Hello \(name), today is \(day)."
-}
+//func greet(name: String, day: String) -> String {
+//    return "Hello \(name), today is \(day)."
+//}
+//
+//println(greet("Bob", "Monday"))
+//
+////returning multiple values
+//func getGasPrices() -> (Double, Double, Double) {
+//    return (3.59, 3.69, 3.79)
+//}
+//println(getGasPrices())
+//
+////variable number of arguments
+//func sumOf(numbers: Int...) -> Int {
+//    var sum = 0
+//    for number in numbers {
+//        sum += number
+//    }
+//    return sum
+//}
+//println(sumOf(3,4,5))
+//
+////ex avg of (not completly correct as function should return Double
+//func avgOf(numbers: Int...) ->Int {
+//    var avg = 0
+//    var sum = 0
+//    var count = 1
+//    for number in numbers {
+//        sum += number
+//        count += 1
+//    }
+//    avg = sum/count
+//    return avg
+//}
+//
+//println(avgOf(2,4,8,2))
 
-println(greet("Bob", "Monday"))
+////Example of nested function
+//func returnFifteen() ->Int {
+//    var y = 10
+//    func add() {
+//        y += 5
+//    }
+//    add()
+//    return y
+//}
+//println(returnFifteen())
+//
+////function can return function as value
+//func makeIncrementer() -> (Int -> Int) {
+//    func addOne(number: Int) -> Int {
+//        return 1 + number
+//    }
+//    return addOne
+//}
+//var increment = makeIncrementer()
+//println(increment(7))
 
-//returning multiple values
-func getGasPrices() -> (Double, Double, Double) {
-    return (3.59, 3.69, 3.79)
-}
-println(getGasPrices())
+////function take another function as argument
+//func hasAnyMatches(list: Int[], condition: Int -> Bool) -> Bool {
+//    for item in list {
+//        if condition(item){
+//            return true
+//        }
+//    }
+//    return false
+//}
+//func lessThanTen(number: Int) -> Bool {
+//    return number < 10
+//}
+//
+//var numbers = [20,19,7,12]
+//println(hasAnyMatches(numbers, lessThanTen))
 
-//variable number of arguments
-func sumOf(numbers: Int...) -> Int {
-    var sum = 0
-    for number in numbers {
-        sum += number
-    }
-    return sum
-}
-println(sumOf(3,4,5))
+//Closures
 
-//ex avg of (not completly correct as function should return Double
-func avgOf(numbers: Int...) ->Int {
-    var avg = 0
-    var sum = 0
-    var count = 1
-    for number in numbers {
-        sum += number
-        count += 1
-    }
-    avg = sum/count
-    return avg
-}
 
-println(avgOf(2,4,8,2))
+
+
